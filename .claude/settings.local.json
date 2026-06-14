@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "PowerShell(Start-Process \"c:\\\\Users\\\\jchoy\\\\Work\\\\AI Projects\\\\Final Fantasy 7\\\\index.html\")"
+    ]
+  }
+}

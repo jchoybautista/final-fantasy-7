@@ -1,0 +1,1367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Final Fantasy VII — Experience the epic remake trilogy from Square Enix. Remake, Rebirth, and Revelation."
+    />
+    <title>Final Fantasy VII — The Remake Trilogy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-ff">FINAL FANTASY</span>
+          <span class="logo-vii">VII</span>
+        </a>
+        <button
+          class="nav-hamburger"
+          id="navHamburger"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#games">Games</a></li>
+          <li><a href="#trailers">Trailers</a></li>
+          <li><a href="#characters">Characters</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#timeline">Story</a></li>
+          <li><a href="#newsletter" class="nav-cta">Pre-Order</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════════
+       HERO — LIFESTREAM
+  ══════════════════════════════════════════ -->
+    <section id="hero">
+      <canvas id="lifestream-canvas"></canvas>
+      <div class="hero-content" id="heroContent">
+        <p class="hero-eyebrow">SQUARE ENIX PRESENTS</p>
+        <div class="hero-logo-wrap">
+          <img
+            src="assets/images/ff7-logo.svg"
+            alt="Final Fantasy VII"
+            class="hero-logo-img"
+          />
+        </div>
+        <p class="hero-subtitle">THE REMAKE TRILOGY</p>
+        <p class="hero-tagline">One Legend. Three Chapters.</p>
+        <div class="hero-ctas">
+          <a href="#games" class="btn btn-primary">Explore the Trilogy</a>
+          <a href="#newsletter" class="btn btn-secondary"
+            >Pre-Order Revelation</a
+          >
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       THE TRILOGY — GAME CARDS
+  ══════════════════════════════════════════ -->
+    <section id="games" class="section">
+      <div class="section-header">
+        <p class="section-eyebrow reveal-text">THE TRILOGY</p>
+        <h2 class="section-title clip-reveal">Three Epic Chapters</h2>
+      </div>
+      <div class="games-grid">
+        <article class="game-card reveal" data-game="remake">
+          <div class="game-card-art">
+            <img
+              src="assets/images/games/remake-cover.jpg"
+              alt="Final Fantasy VII Remake"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div class="game-card-content">
+            <div class="game-badge game-badge--available">Available Now</div>
+            <h3 class="game-title">Final Fantasy VII<br /><em>Remake</em></h3>
+            <p class="game-year">2020 · Intergrade 2021</p>
+            <p class="game-desc">
+              The legendary RPG reimagined from the ground up. Return to Midgar
+              — a city under the iron grip of the Shinra Corporation.
+            </p>
+            <div class="game-platforms">
+              <span class="platform-chip">PS4</span>
+              <span class="platform-chip">PS5</span>
+              <span class="platform-chip">PC</span>
+              <span class="platform-chip">Switch</span>
+              <span class="platform-chip">Xbox</span>
+            </div>
+            <a
+              href="https://store.steampowered.com/app/1462040/FINAL_FANTASY_VII_REMAKE_INTERGRADE/"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary game-btn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+              Buy Now
+            </a>
+          </div>
+        </article>
+
+        <article
+          class="game-card game-card--featured reveal"
+          data-game="rebirth"
+        >
+          <div class="game-card-art">
+            <img
+              src="assets/images/games/rebirth-cover.jpg"
+              alt="Final Fantasy VII Rebirth"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div class="game-card-content">
+            <div class="game-badge game-badge--available">Available Now</div>
+            <h3 class="game-title">Final Fantasy VII<br /><em>Rebirth</em></h3>
+            <p class="game-year">2024 · PC 2025</p>
+            <p class="game-desc">
+              The story expands beyond Midgar. Cloud and his allies journey
+              across a vast world — chasing destiny itself.
+            </p>
+            <div class="game-platforms">
+              <span class="platform-chip">PS5</span>
+              <span class="platform-chip">PC</span>
+              <span class="platform-chip">Switch 2</span>
+              <span class="platform-chip">Xbox</span>
+            </div>
+            <a
+              href="https://store.steampowered.com/app/2909400/FINAL_FANTASY_VII_REBIRTH/"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary game-btn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+              Buy Now
+            </a>
+          </div>
+        </article>
+
+        <article
+          class="game-card game-card--upcoming reveal"
+          data-game="revelation"
+        >
+          <div class="game-card-art game-card-art--upcoming">
+            <img
+              src="assets/images/games/revelation-cover.jpg"
+              alt="Final Fantasy VII Revelation"
+              onerror="this.style.display = 'none'"
+            />
+            <div class="coming-soon-overlay"><span>Spring 2027</span></div>
+          </div>
+          <div class="game-card-content">
+            <div class="game-badge game-badge--upcoming">
+              Coming Spring 2027
+            </div>
+            <h3 class="game-title">
+              Final Fantasy VII<br /><em>Revelation</em>
+            </h3>
+            <p class="game-year">2027 · All Platforms Day One</p>
+            <p class="game-desc">
+              The final chapter arrives. Board the Highwind and uncover the
+              ultimate fate of Cloud, Aerith, and the Planet.
+            </p>
+            <div class="game-platforms">
+              <span class="platform-chip">PS5</span>
+              <span class="platform-chip">PC</span>
+              <span class="platform-chip">Switch 2</span>
+              <span class="platform-chip">Xbox</span>
+            </div>
+            <a
+              href="https://na.finalfantasy.com"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-outline game-btn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+              Wishlist Now
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       STATS & RECOGNITION
+  ══════════════════════════════════════════ -->
+    <section id="stats" class="section section--dark stats-section">
+      <div class="section-header">
+        <p class="section-eyebrow reveal-text">BY THE NUMBERS</p>
+        <h2 class="section-title clip-reveal">A Legacy Reborn</h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item reveal" data-counter="15.5" data-decimal="true">
+          <div class="stat-number">
+            <span class="counter-value">0</span
+            ><span class="stat-suffix">M+</span>
+          </div>
+          <p class="stat-label">Original FF7 Copies Sold</p>
+        </div>
+        <div class="stat-item reveal" data-counter="8.7" data-decimal="true">
+          <div class="stat-number">
+            <span class="counter-value">0</span
+            ><span class="stat-suffix">M+</span>
+          </div>
+          <p class="stat-label">FF7 Remake Copies Sold</p>
+        </div>
+        <div class="stat-item reveal" data-counter="5" data-decimal="false">
+          <div class="stat-number">
+            <span class="counter-value">0</span
+            ><span class="stat-suffix">M+</span>
+          </div>
+          <p class="stat-label">FF7 Rebirth Copies Sold</p>
+        </div>
+        <div class="stat-item reveal" data-counter="40" data-decimal="false">
+          <div class="stat-number">
+            <span class="counter-value">0</span
+            ><span class="stat-suffix">+</span>
+          </div>
+          <p class="stat-label">Game of the Year Awards</p>
+        </div>
+        <div class="stat-item reveal" data-counter="125" data-decimal="false">
+          <div class="stat-number">
+            <span class="counter-value">0</span
+            ><span class="stat-suffix">+</span>
+          </div>
+          <p class="stat-label">Perfect Review Scores</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       CRITIC RATINGS
+  ══════════════════════════════════════════ -->
+    <section id="ratings" class="section">
+      <div class="section-header">
+        <p class="section-eyebrow reveal-text">CRITICAL ACCLAIM</p>
+        <h2 class="section-title clip-reveal">What The World Is Saying</h2>
+      </div>
+      <div class="ratings-tabs">
+        <button class="rating-tab active" data-game-tab="remake">
+          FF7 Remake
+        </button>
+        <button class="rating-tab" data-game-tab="rebirth">FF7 Rebirth</button>
+      </div>
+
+      <div class="ratings-grid" id="remake-ratings">
+        <div class="rating-card reveal">
+          <div class="rating-outlet">Metacritic</div>
+          <div class="rating-score">
+            <span class="rating-value" data-target="87">0</span
+            ><span class="rating-total">/100</span>
+          </div>
+          <div class="rating-bar">
+            <div class="rating-fill" style="--pct: 87%"></div>
+          </div>
+        </div>
+        <div class="rating-card reveal">
+          <div class="rating-outlet">IGN</div>
+          <div class="rating-score">
+            <span class="rating-value" data-target="8">0</span
+            ><span class="rating-total">/10</span>
+          </div>
+          <div class="rating-bar">
+            <div class="rating-fill" style="--pct: 80%"></div>
+          </div>
+        </div>
+        <div class="rating-card rating-card--perfect reveal">
+          <div class="rating-outlet">GameSpot</div>
+          <div class="rating-score">
+            <span class="rating-value" data-target="10">0</span
+            ><span class="rating-total">/10</span>
+          </div>
+          <div class="rating-bar">
+            <div class="rating-fill" style="--pct: 100%"></div>
+          </div>
+        </div>
+        <div class="rating-card reveal">
+          <div class="rating-outlet">OpenCritic</div>
+          <div class="rating-score">
+            <span class="rating-value" data-target="89">0</span
+            ><span class="rating-total">/100</span>
+          </div>
+          <div class="rating-bar">
+            <div class="rating-fill" style="--pct: 89%"></div>
+          </div>
+        </div>
+        <div class="rating-card reveal">
+          <div class="rating-outlet">Game Informer</div>
+          <div class="rating-score">
+            <span class="rating-value" data-target="8.75" data-decimal="true"
+              >0</span
+            ><span class="rating-total">/10</span>
+          </div>
+          <div class="rating-bar">
+            <div class="rating-fill" style="--pct: 87.5%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ratings-grid hidden" id="rebirth-ratings">
+        <div class="rating-card rating-card--perfect reveal">
+          <div class="rating-outlet">Metacritic</div>
+          <div class="rating-score">
+            <span class="rating-value" data-target="93">0</span
+            ><span class="rating-total">/100</span>
+          </div>
+          <div class="rating-bar">
+            <div class="rating-fill" style="--pct: 93%"></div>
+          </div>
+        </div>
+        <div class="rating-card reveal">
+          <div class="rating-outlet">IGN</div>
+          <div class="rating-score">
+            <span class="rating-value" data-target="9">0</span
+            ><span class="rating-total">/10</span>
+          </div>
+          <div class="rating-bar">
+            <div class="rating-fill" style="--pct: 90%"></div>
+          </div>
+        </div>
+        <div class="rating-card reveal">
+          <div class="rating-outlet">OpenCritic</div>
+          <div class="rating-score">
+            <span class="rating-value" data-target="92">0</span
+            ><span class="rating-total">/100</span>
+          </div>
+          <div class="rating-bar">
+            <div class="rating-fill" style="--pct: 92%"></div>
+          </div>
+        </div>
+        <div class="rating-card reveal">
+          <div class="rating-outlet">Famitsu</div>
+          <div class="rating-score">
+            <span class="rating-value" data-target="38">0</span
+            ><span class="rating-total">/40</span>
+          </div>
+          <div class="rating-bar">
+            <div class="rating-fill" style="--pct: 95%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rating-quotes">
+        <blockquote class="rating-quote reveal">
+          <p>
+            "A stunning recreation of a classic, a joy to play and look at, with
+            a phenomenal soundtrack."
+          </p>
+          <cite>— Jason Schreier on <em>FF7 Rebirth</em></cite>
+        </blockquote>
+        <blockquote class="rating-quote reveal">
+          <p>"Final Fantasy VII Remake is an astounding achievement."</p>
+          <cite>— GameSpot on <em>FF7 Remake</em></cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       AWARDS
+  ══════════════════════════════════════════ -->
+    <section id="awards" class="section section--dark">
+      <div class="section-header">
+        <p class="section-eyebrow reveal-text">AWARDS & ACCOLADES</p>
+        <h2 class="section-title clip-reveal">Recognized by the World</h2>
+      </div>
+      <div class="awards-columns">
+        <div class="awards-column reveal">
+          <h3 class="awards-game-title">FF7 Remake</h3>
+          <div class="award-badge">
+            <div class="award-icon">🏆</div>
+            <div class="award-info">
+              <span class="award-name">Best RPG</span>
+              <span class="award-event">The Game Awards 2020</span>
+            </div>
+          </div>
+          <div class="award-badge">
+            <div class="award-icon">🎵</div>
+            <div class="award-info">
+              <span class="award-name">Best Score &amp; Music</span>
+              <span class="award-event">The Game Awards 2020</span>
+            </div>
+          </div>
+          <div class="award-badge">
+            <div class="award-icon">🎮</div>
+            <div class="award-info">
+              <span class="award-name">RPG of the Year</span>
+              <span class="award-event">DICE Awards 2021</span>
+            </div>
+          </div>
+          <div class="award-badge">
+            <div class="award-icon">⭐</div>
+            <div class="award-info">
+              <span class="award-name">Game, Classic Revival</span>
+              <span class="award-event">NAVGTR Awards 2021</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="awards-divider"></div>
+
+        <div class="awards-column reveal">
+          <h3 class="awards-game-title">FF7 Rebirth</h3>
+          <div class="award-badge award-badge--gold">
+            <div class="award-icon">📖</div>
+            <div class="award-info">
+              <span class="award-name">Best Storytelling</span>
+              <span class="award-event">Golden Joystick Awards 2024</span>
+            </div>
+          </div>
+          <div class="award-badge award-badge--gold">
+            <div class="award-icon">🎵</div>
+            <div class="award-info">
+              <span class="award-name">Best Soundtrack</span>
+              <span class="award-event">Golden Joystick Awards 2024</span>
+            </div>
+          </div>
+          <div class="award-badge award-badge--gold">
+            <div class="award-icon">🎭</div>
+            <div class="award-info">
+              <span class="award-name">Best Leading Performer</span>
+              <span class="award-event">Golden Joystick Awards 2024</span>
+            </div>
+          </div>
+          <div class="award-badge award-badge--gold">
+            <div class="award-icon">🌟</div>
+            <div class="award-info">
+              <span class="award-name">Best Supporting Performer</span>
+              <span class="award-event">Golden Joystick Awards 2024</span>
+            </div>
+          </div>
+          <div class="award-badge award-badge--special">
+            <div class="award-icon">👑</div>
+            <div class="award-info">
+              <span class="award-name">40+ Game of the Year Awards</span>
+              <span class="award-event"
+                >#1 Highest-scored game of 2024 · Metacritic</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       TRAILERS
+  ══════════════════════════════════════════ -->
+    <section id="trailers" class="section">
+      <div class="section-header">
+        <p class="section-eyebrow reveal-text">OFFICIAL TRAILERS</p>
+        <h2 class="section-title clip-reveal">Experience the Trilogy</h2>
+      </div>
+      <div class="trailers-grid">
+        <div
+          class="trailer-panel reveal"
+          data-video-id="tEPb8uQ27BI"
+          data-title="FF7 Remake — Official Trailer"
+        >
+          <div class="trailer-thumb">
+            <img
+              src="https://img.youtube.com/vi/tEPb8uQ27BI/maxresdefault.jpg"
+              alt="FF7 Remake Trailer"
+              onerror="
+                this.src =
+                  'https://img.youtube.com/vi/tEPb8uQ27BI/mqdefault.jpg'
+              "
+            />
+          </div>
+          <div class="trailer-overlay">
+            <div class="trailer-label">
+              <span class="trailer-game">FF7 REMAKE</span>
+              <span class="trailer-year">2020</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="trailer-panel reveal"
+          data-video-id="KOhs9ZLImgE"
+          data-title="FF7 Rebirth — Official Trailer"
+        >
+          <div class="trailer-thumb">
+            <img
+              src="https://img.youtube.com/vi/KOhs9ZLImgE/maxresdefault.jpg"
+              alt="FF7 Rebirth Trailer"
+              onerror="
+                this.src =
+                  'https://img.youtube.com/vi/KOhs9ZLImgE/mqdefault.jpg'
+              "
+            />
+          </div>
+          <div class="trailer-overlay">
+            <div class="trailer-label">
+              <span class="trailer-game">FF7 REBIRTH</span>
+              <span class="trailer-year">2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="trailer-panel reveal"
+          data-video-id="uVMg1Ub-6-Y"
+          data-title="FF7 Revelation — Official Trailer"
+        >
+          <div class="trailer-thumb">
+            <img
+              src="https://img.youtube.com/vi/uVMg1Ub-6-Y/maxresdefault.jpg"
+              alt="FF7 Revelation Trailer"
+              onerror="
+                this.src =
+                  'https://img.youtube.com/vi/uVMg1Ub-6-Y/mqdefault.jpg'
+              "
+            />
+          </div>
+          <div class="trailer-overlay">
+            <div class="trailer-label">
+              <span class="trailer-game">FF7 REVELATION</span>
+              <span class="trailer-year">2027</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       SCREENSHOTS — HORIZONTAL GALLERY
+  ══════════════════════════════════════════ -->
+    <section id="gallery" class="gallery-section">
+      <div class="section-header">
+        <p class="section-eyebrow reveal-text">THE WORLD</p>
+        <h2 class="section-title clip-reveal">Inside the Adventure</h2>
+      </div>
+      <div class="gallery-outer">
+        <div class="gallery-track">
+          <div
+            class="gallery-item"
+            style="
+              --bg: linear-gradient(
+                135deg,
+                #0a0022 0%,
+                #1a0044 50%,
+                #0d001a 100%
+              );
+            "
+          >
+            <video autoplay loop muted playsinline>
+              <source
+                src="assets/videos/midgarthesteelcity.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="gallery-item-label">Midgar — The Steel City</div>
+          </div>
+          <div
+            class="gallery-item"
+            style="
+              --bg: linear-gradient(
+                135deg,
+                #001428 0%,
+                #002244 50%,
+                #000e1a 100%
+              );
+            "
+          >
+            <video autoplay loop muted playsinline>
+              <source
+                src="assets/videos/atbcombatsystem.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="gallery-item-label">ATB Combat System</div>
+          </div>
+          <div
+            class="gallery-item"
+            style="
+              --bg: linear-gradient(
+                135deg,
+                #0a1a00 0%,
+                #1a3300 50%,
+                #051000 100%
+              );
+            "
+          >
+            <video autoplay loop muted playsinline>
+              <source src="assets/videos/sector5slums.mp4" type="video/mp4" />
+            </video>
+            <div class="gallery-item-label">Sector 5 Slums</div>
+          </div>
+          <div
+            class="gallery-item"
+            style="
+              --bg: linear-gradient(
+                135deg,
+                #001a10 0%,
+                #003322 50%,
+                #000e08 100%
+              );
+            "
+          >
+            <video autoplay loop muted playsinline>
+              <source
+                src="assets/videos/theopenworldofrebirth.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="gallery-item-label">The Open World of Rebirth</div>
+          </div>
+          <div
+            class="gallery-item"
+            style="
+              --bg: linear-gradient(
+                135deg,
+                #1a1000 0%,
+                #332200 50%,
+                #0e0800 100%
+              );
+            "
+          >
+            <video autoplay loop muted playsinline>
+              <source
+                src="assets/videos/junonmilitaryport.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="gallery-item-label">Junon — The Military Port</div>
+          </div>
+          <div
+            class="gallery-item"
+            style="
+              --bg: linear-gradient(
+                135deg,
+                #150018 0%,
+                #300040 50%,
+                #0a000d 100%
+              );
+            "
+          >
+            <video autoplay loop muted playsinline>
+              <source src="assets/videos/cosmocanyon.mp4" type="video/mp4" />
+            </video>
+            <div class="gallery-item-label">Cosmo Canyon</div>
+          </div>
+          <div
+            class="gallery-item"
+            style="
+              --bg: linear-gradient(
+                135deg,
+                #00081a 0%,
+                #001440 50%,
+                #00040d 100%
+              );
+            "
+          >
+            <video autoplay loop muted playsinline>
+              <source
+                src="assets/videos/thehighwindairship.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="gallery-item-label">The Highwind Airship</div>
+          </div>
+          <div
+            class="gallery-item"
+            style="
+              --bg: linear-gradient(
+                135deg,
+                #000d1a 0%,
+                #001a33 50%,
+                #00060d 100%
+              );
+            "
+          >
+            <video autoplay loop muted playsinline>
+              <source
+                src="assets/videos/thefinaljourney.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="gallery-item-label">The Final Journey</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       CHARACTERS
+  ══════════════════════════════════════════ -->
+    <section id="characters" class="section section--dark">
+      <div class="section-header">
+        <p class="section-eyebrow reveal-text">THE PARTY</p>
+        <h2 class="section-title clip-reveal">Faces of Destiny</h2>
+      </div>
+      <div class="characters-grid">
+        <article class="character-card reveal" data-character="cloud">
+          <div
+            class="character-img"
+            style="--char-bg: linear-gradient(160deg, #0a0a1a, #1a1a3e)"
+          >
+            <img
+              src="assets/images/characters/cloud.jpg"
+              alt="Cloud Strife"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div class="character-info">
+            <h3 class="character-name">Cloud Strife</h3>
+            <p class="character-role">Ex-SOLDIER Mercenary</p>
+            <p class="character-game">Remake · Rebirth · Revelation</p>
+          </div>
+        </article>
+        <article class="character-card reveal" data-character="aerith">
+          <div
+            class="character-img"
+            style="--char-bg: linear-gradient(160deg, #0d0a1a, #2d0050)"
+          >
+            <img
+              src="assets/images/characters/aerith.jpg"
+              alt="Aerith Gainsborough"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div class="character-info">
+            <h3 class="character-name">Aerith Gainsborough</h3>
+            <p class="character-role">Cetra, Voice of the Planet</p>
+            <p class="character-game">Remake · Rebirth · Revelation</p>
+          </div>
+        </article>
+        <article class="character-card reveal" data-character="tifa">
+          <div
+            class="character-img"
+            style="--char-bg: linear-gradient(160deg, #1a0a0a, #3e0010)"
+          >
+            <img
+              src="assets/images/characters/tifa.jpg"
+              alt="Tifa Lockhart"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div class="character-info">
+            <h3 class="character-name">Tifa Lockhart</h3>
+            <p class="character-role">Martial Artist, Childhood Friend</p>
+            <p class="character-game">Remake · Rebirth · Revelation</p>
+          </div>
+        </article>
+        <article class="character-card reveal" data-character="barret">
+          <div
+            class="character-img"
+            style="--char-bg: linear-gradient(160deg, #0a0a0a, #1a1a0a)"
+          >
+            <img
+              src="assets/images/characters/barret.jpg"
+              alt="Barret Wallace"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div class="character-info">
+            <h3 class="character-name">Barret Wallace</h3>
+            <p class="character-role">Avalanche Leader</p>
+            <p class="character-game">Remake · Rebirth · Revelation</p>
+          </div>
+        </article>
+        <article class="character-card reveal" data-character="redxiii">
+          <div
+            class="character-img"
+            style="--char-bg: linear-gradient(160deg, #1a0800, #3e1500)"
+          >
+            <img
+              src="assets/images/characters/redxiii.jpg"
+              alt="Red XIII"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div class="character-info">
+            <h3 class="character-name">Red XIII</h3>
+            <p class="character-role">Guardian Beast of Cosmo Canyon</p>
+            <p class="character-game">Rebirth · Revelation</p>
+          </div>
+        </article>
+        <article class="character-card reveal" data-character="yuffie">
+          <div
+            class="character-img"
+            style="--char-bg: linear-gradient(160deg, #001a0a, #003e20)"
+          >
+            <img
+              src="assets/images/characters/yuffie.jpg"
+              alt="Yuffie Kisaragi"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div class="character-info">
+            <h3 class="character-name">Yuffie Kisaragi</h3>
+            <p class="character-role">Wutai Ninja</p>
+            <p class="character-game">Intergrade · Rebirth · Revelation</p>
+          </div>
+        </article>
+        <article class="character-card reveal" data-character="caitsith">
+          <div
+            class="character-img"
+            style="--char-bg: linear-gradient(160deg, #001a1a, #003e3e)"
+          >
+            <img
+              src="assets/images/characters/caitsith.jpg"
+              alt="Cait Sith"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div class="character-info">
+            <h3 class="character-name">Cait Sith</h3>
+            <p class="character-role">Moogle-riding Spy</p>
+            <p class="character-game">Rebirth · Revelation</p>
+          </div>
+        </article>
+        <article class="character-card reveal" data-character="cid">
+          <div
+            class="character-img"
+            style="--char-bg: linear-gradient(160deg, #001018, #002040)"
+          >
+            <img
+              src="assets/images/characters/cid.jpg"
+              alt="Cid Highwind"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div class="character-info">
+            <h3 class="character-name">Cid Highwind</h3>
+            <p class="character-role">Highwind Pilot</p>
+            <p class="character-game">Revelation</p>
+          </div>
+        </article>
+        <article class="character-card reveal" data-character="vincent">
+          <div
+            class="character-img"
+            style="--char-bg: linear-gradient(160deg, #0e0010, #1e0020)"
+          >
+            <img
+              src="assets/images/characters/vincent.jpg"
+              alt="Vincent Valentine"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div class="character-info">
+            <h3 class="character-name">Vincent Valentine</h3>
+            <p class="character-role">Turk with a Dark Secret</p>
+            <p class="character-game">Revelation</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       MUSIC & COMPOSER
+  ══════════════════════════════════════════ -->
+    <section id="music" class="section">
+      <div class="section-header">
+        <p class="section-eyebrow reveal-text">THE MUSIC</p>
+        <h2 class="section-title clip-reveal">A Symphony of Legends</h2>
+      </div>
+      <div class="music-layout">
+        <div class="composer-card reveal">
+          <div class="composer-img">
+            <img src="assets/images/nobuo-uematsu.jpg" alt="Nobuo Uematsu" />
+          </div>
+          <div class="composer-info">
+            <p class="composer-label">LEGENDARY COMPOSER</p>
+            <h3 class="composer-name">Nobuo Uematsu</h3>
+            <p class="composer-bio">
+              Joined Square in 1985 as a self-taught musician. His iconic
+              compositions have defined an era of Japanese RPGs. From
+              "One-Winged Angel" to "No Promises to Keep" — his music is the
+              very soul of Final Fantasy VII.
+            </p>
+            <div class="composer-highlights">
+              <span class="composer-highlight">40+ Years Composing</span>
+              <span class="composer-highlight">Entire FF7 Trilogy</span>
+              <span class="composer-highlight">One-Winged Angel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="songs-list reveal">
+          <h3 class="songs-title">Theme Songs</h3>
+          <div class="song-item">
+            <div class="song-number">01</div>
+            <div class="song-details">
+              <p class="song-name">"One-Winged Angel"</p>
+              <p class="song-game">Original Final Fantasy VII · 1997</p>
+              <p class="song-info">Composer: Nobuo Uematsu</p>
+            </div>
+            <a
+              href="https://www.youtube.com/results?search_query=one+winged+angel+ff7+orchestra"
+              target="_blank"
+              rel="noopener"
+              class="song-listen"
+              aria-label="Listen to One-Winged Angel"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </a>
+          </div>
+          <div class="song-item">
+            <div class="song-number">02</div>
+            <div class="song-details">
+              <p class="song-name">"Hollow"</p>
+              <p class="song-game">FF7 Remake · 2020</p>
+              <p class="song-info">
+                Vocals: Yosh (Survive Said The Prophet) · Composer: Nobuo
+                Uematsu
+              </p>
+            </div>
+            <a
+              href="https://www.youtube.com/results?search_query=hollow+ff7+remake+ending"
+              target="_blank"
+              rel="noopener"
+              class="song-listen"
+              aria-label="Listen to Hollow"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </a>
+          </div>
+          <div class="song-item">
+            <div class="song-number">03</div>
+            <div class="song-details">
+              <p class="song-name">"No Promises to Keep"</p>
+              <p class="song-game">FF7 Rebirth · 2024</p>
+              <p class="song-info">
+                Vocals: Loren Allred · Composer: Nobuo Uematsu
+              </p>
+            </div>
+            <a
+              href="https://www.youtube.com/results?search_query=no+promises+to+keep+ff7+rebirth+loren+allred"
+              target="_blank"
+              rel="noopener"
+              class="song-listen"
+              aria-label="Listen to No Promises to Keep"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       MESSAGE FROM THE DIRECTOR
+  ══════════════════════════════════════════ -->
+    <section id="director" class="section director-section">
+      <div class="director-inner">
+        <div class="director-photo reveal">
+          <img
+            src="assets/images/director/naoki-hamaguchi.jpg"
+            alt="Naoki Hamaguchi — Game Director"
+            onerror="this.style.display = 'none'"
+          />
+          <div class="director-photo-glow"></div>
+        </div>
+        <div class="director-message reveal">
+          <p class="section-eyebrow reveal-text">FROM THE DIRECTOR</p>
+          <blockquote class="director-quote">
+            <p>
+              "When we began reimagining Final Fantasy VII, we asked ourselves a
+              single question: what would it mean to truly do this story justice
+              for both the fans who have carried it in their hearts for nearly
+              three decades, and the new generation experiencing it for the very
+              first time? The answer shaped everything — every design decision,
+              every line of dialogue, every note of music. This trilogy is not a
+              retelling. It is a re-living. We wanted players to feel the weight
+              of every choice, the depth of every bond, and the wonder of a
+              world that has only grown richer with time. Our journey with Cloud
+              and his companions is reaching its final chapter, and I can
+              promise you — the destination is worth every step."
+            </p>
+          </blockquote>
+          <div class="director-sig">
+            <p class="director-name">Naoki Hamaguchi</p>
+            <p class="director-title">
+              Game Director — Final Fantasy VII Remake Trilogy
+            </p>
+            <p class="director-studio">Square Enix Co., Ltd.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       PLATFORMS
+  ══════════════════════════════════════════ -->
+    <section id="platforms" class="section section--dark">
+      <div class="section-header">
+        <p class="section-eyebrow reveal-text">WHERE TO PLAY</p>
+        <h2 class="section-title clip-reveal">Available On</h2>
+      </div>
+      <div class="platforms-matrix reveal">
+        <div class="matrix-header">
+          <div class="matrix-platform-col">Platform</div>
+          <div class="matrix-game-col">Remake</div>
+          <div class="matrix-game-col">Rebirth</div>
+          <div class="matrix-game-col">Revelation</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-platform">PlayStation 4</div>
+          <div class="matrix-cell matrix-cell--yes">✓</div>
+          <div class="matrix-cell matrix-cell--no">—</div>
+          <div class="matrix-cell matrix-cell--no">—</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-platform">PlayStation 5</div>
+          <div class="matrix-cell matrix-cell--yes">✓</div>
+          <div class="matrix-cell matrix-cell--yes">✓</div>
+          <div class="matrix-cell matrix-cell--yes">✓</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-platform">Nintendo Switch</div>
+          <div class="matrix-cell matrix-cell--yes">✓</div>
+          <div class="matrix-cell matrix-cell--no">—</div>
+          <div class="matrix-cell matrix-cell--no">—</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-platform">Nintendo Switch 2</div>
+          <div class="matrix-cell matrix-cell--no">—</div>
+          <div class="matrix-cell matrix-cell--yes">✓</div>
+          <div class="matrix-cell matrix-cell--yes">✓</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-platform">Xbox Series X|S</div>
+          <div class="matrix-cell matrix-cell--yes">✓</div>
+          <div class="matrix-cell matrix-cell--yes">✓</div>
+          <div class="matrix-cell matrix-cell--yes">✓</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-platform">PC (Steam)</div>
+          <div class="matrix-cell matrix-cell--yes">✓</div>
+          <div class="matrix-cell matrix-cell--yes">✓</div>
+          <div class="matrix-cell matrix-cell--yes">✓</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       DEVELOPMENT TIMELINE
+  ══════════════════════════════════════════ -->
+    <section id="timeline" class="section">
+      <div class="section-header">
+        <p class="section-eyebrow reveal-text">THE JOURNEY</p>
+        <h2 class="section-title clip-reveal">
+          A Story 30 Years in the Making
+        </h2>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline-track">
+          <div class="timeline-track-fill"></div>
+        </div>
+        <div class="timeline-entries">
+          <div class="timeline-entry" data-side="left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content reveal">
+              <span class="timeline-year">1997</span>
+              <h4>The Legend Begins</h4>
+              <p>
+                Original FFVII released on PlayStation. Sold 10M+ copies on PS1
+                alone, revolutionizing the RPG genre worldwide.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-entry" data-side="right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content reveal">
+              <span class="timeline-year">2005</span>
+              <h4>Advent Children</h4>
+              <p>
+                Final Fantasy VII: Advent Children CGI film reignites global
+                demand. Fans begin an eight-year wait for a proper remake.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-entry" data-side="left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content reveal">
+              <span class="timeline-year">2015</span>
+              <h4>E3 Announcement</h4>
+              <p>
+                Remake officially announced at E3 2015. The internet erupts. A
+                decade-long dream becomes reality.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-entry" data-side="right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content reveal">
+              <span class="timeline-year">2017</span>
+              <h4>In-House Development</h4>
+              <p>
+                Development moved fully in-house at Square Enix. No original
+                documentation survived — the team rebuilt from memory.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-entry" data-side="left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content reveal">
+              <span class="timeline-year">2020</span>
+              <h4>FF7 Remake Arrives</h4>
+              <p>
+                Released April 10, 2020. Won Best RPG and Best Score &amp; Music
+                at The Game Awards. 8.7M copies sold worldwide.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-entry" data-side="right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content reveal">
+              <span class="timeline-year">2021</span>
+              <h4>Intergrade</h4>
+              <p>
+                Enhanced PS5/PC version with the INTERmission DLC — Yuffie's
+                story — expanding the world before Rebirth.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-entry" data-side="left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content reveal">
+              <span class="timeline-year">2024</span>
+              <h4>FF7 Rebirth Soars</h4>
+              <p>
+                Released February 29, 2024. 40+ GOTY awards. Highest-scored game
+                of the year on Metacritic. 125+ perfect scores.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-entry" data-side="right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content reveal">
+              <span class="timeline-year">2026</span>
+              <h4>Platform Expansion</h4>
+              <p>
+                Remake and Rebirth simultaneously launch on Nintendo Switch 2
+                and Xbox Series X|S on June 3, bringing the trilogy to all.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-entry" data-side="left">
+            <div class="timeline-dot timeline-dot--future"></div>
+            <div class="timeline-content reveal">
+              <span class="timeline-year">2027</span>
+              <h4>FF7 Revelation — The Final Chapter</h4>
+              <p>
+                Spring 2027. The trilogy concludes. Day-one on all platforms.
+                The fate of Cloud, Aerith, and the Planet is finally revealed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       NEWSLETTER
+  ══════════════════════════════════════════ -->
+    <section id="newsletter" class="section section--dark newsletter-section">
+      <div class="newsletter-inner reveal">
+        <p class="section-eyebrow">STAY CONNECTED</p>
+        <h2 class="newsletter-title">Get Latest Updates</h2>
+        <p class="newsletter-desc">
+          Get the latest updates on FF7 Revelation — exclusive reveals, release
+          dates, and more. Delivered straight to you.
+        </p>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <div class="newsletter-input-group" id="newsletterInputGroup">
+            <input
+              type="email"
+              id="newsletterEmail"
+              placeholder="Enter your email address"
+              autocomplete="email"
+            />
+            <button type="submit" class="btn btn-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              Subscribe
+            </button>
+          </div>
+          <p class="newsletter-fine">No spam. Unsubscribe anytime.</p>
+          <div class="newsletter-success" id="newsletterSuccess" hidden>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+            </svg>
+            <span>You're in. We'll keep you posted, Soldier.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       SQUARE ENIX
+  ══════════════════════════════════════════ -->
+    <section id="square-enix" class="section square-enix-section">
+      <div class="se-inner reveal">
+        <div class="se-logo">
+          <img
+            src="assets/images/square-enix-logo.svg"
+            alt="Square Enix"
+            class="se-logo-img"
+          />
+        </div>
+        <p class="se-tagline">Developed &amp; Published by Square Enix</p>
+        <a
+          href="https://na.finalfantasy.com"
+          target="_blank"
+          rel="noopener"
+          class="se-link"
+          >Visit the Official Final Fantasy Website →</a
+        >
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+    <footer id="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">FINAL FANTASY VII</span>
+          <p>The Remake Trilogy</p>
+        </div>
+        <div class="footer-disclaimer">
+          <p>
+            This is a fan-made tribute page created as a portfolio showcase.
+            Final Fantasy VII and all related content are trademarks of Square
+            Enix Co., Ltd. This page is not affiliated with or endorsed by
+            Square Enix.
+          </p>
+        </div>
+        <div class="footer-credit">
+          <p>
+            Built with
+            <a href="https://claude.ai/code" target="_blank" rel="noopener"
+              >Claude Code</a
+            >
+            &nbsp;·&nbsp; &copy; 2026
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ══════════════════════════════════════════
+       VIDEO MODAL
+  ══════════════════════════════════════════ -->
+    <div
+      id="videoModal"
+      class="video-modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Video player"
+    >
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div class="modal-content" id="modalContent">
+        <button class="modal-close" id="modalClose" aria-label="Close video">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+            />
+          </svg>
+        </button>
+        <div class="modal-video-wrap">
+          <div class="modal-thumbnail-overlay" id="modalThumbnailOverlay">
+            <img id="modalThumbImg" src="" alt="Video thumbnail" />
+            <div class="modal-thumb-gradient"></div>
+            <a id="modalFallbackLink" class="modal-yt-btn" target="_blank" rel="noopener noreferrer">
+              <span class="modal-yt-icon">
+                <svg viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="68" height="48">
+                  <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#FF0000"/>
+                  <path d="M45 24L27 14v20l18-10z" fill="#fff"/>
+                </svg>
+              </span>
+              <span class="modal-yt-label">Watch on YouTube</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/lifestream.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
