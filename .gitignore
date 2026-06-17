@@ -1,1 +1,17 @@
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Claude local memory and settings
 .claude/
+
+# macOS
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+
+# Logs
+*.log
