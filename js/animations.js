@@ -227,10 +227,19 @@
   });
 
   // ── Horizontal gallery scroll ──────────────
+  // Same pinned, scroll-driven horizontal slide on every viewport
+  // (desktop AND mobile). The gallery items are sized smaller on mobile
+  // via CSS, so the pin distance is actually a bit shorter there.
   const galleryTrack = document.querySelector('.gallery-track');
   const galleryOuter = document.querySelector('.gallery-outer');
 
   if (galleryTrack && galleryOuter) {
+    // On mobile the browser URL bar showing/hiding fires a height-only
+    // "resize". Without this, each such event would refresh ScrollTrigger and
+    // make the pinned gallery jump. ignoreMobileResize tells ScrollTrigger to
+    // ignore those toolbar-driven viewport-height changes.
+    ScrollTrigger.config({ ignoreMobileResize: true });
+
     const getScrollAmount = () => -(galleryTrack.scrollWidth - galleryOuter.offsetWidth);
 
     // Drive horizontal movement with a tween so containerAnimation works
@@ -243,24 +252,9 @@
         end: () => '+=' + galleryTrack.scrollWidth,
         pin: true,
         scrub: 1,
+        anticipatePin: 1,
         invalidateOnRefresh: true,
       },
-    });
-
-    // Re-initialize all ScrollTriggers after resize so pin spacer heights
-    // are recalculated correctly. Without this, resizing mid-scroll (e.g.
-    // opening DevTools) leaves the pin spacer at the wrong size, causing
-    // the gallery to overlap sections when scrolling back up.
-    // After load the browser may restore scroll position, causing pin spacer
-    // heights to be mis-calculated. Refresh once layout has fully settled.
-    window.addEventListener('load', () => {
-      requestAnimationFrame(() => ScrollTrigger.refresh(true));
-    });
-
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => ScrollTrigger.refresh(true), 150);
     });
 
     // Subtle parallax on images/videos relative to the horizontal scroll
@@ -276,6 +270,22 @@
           scrub: true,
         },
       });
+    });
+
+    // Refresh after all assets load so pin-spacer heights are correct.
+    window.addEventListener('load', () => {
+      requestAnimationFrame(() => ScrollTrigger.refresh(true));
+    });
+
+    // Only refresh on a WIDTH change (orientation / desktop resize), never on a
+    // height-only change (mobile URL bar) which would otherwise jump the pin.
+    let lastWidth = window.innerWidth;
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      if (window.innerWidth === lastWidth) return;
+      lastWidth = window.innerWidth;
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => ScrollTrigger.refresh(true), 150);
     });
   }
 

@@ -16,25 +16,33 @@
   if (!modal) return;
 
   let isOpen = false;
+  let lastFocused = null;
 
   function openModal(videoId, title) {
     if (isOpen) return;
     isOpen = true;
+    lastFocused = document.activeElement;
 
     if (thumbImg) {
       const max = 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg';
       const hq  = 'https://img.youtube.com/vi/' + videoId + '/hqdefault.jpg';
       thumbImg.src = max;
+      thumbImg.alt = title + ' thumbnail';
       thumbImg.onerror = () => { thumbImg.src = hq; };
     }
     if (fallbackLink) {
       fallbackLink.href = 'https://www.youtube.com/watch?v=' + videoId;
+      fallbackLink.setAttribute('aria-label', 'Watch ' + title + ' on YouTube');
     }
 
     if (overlay) overlay.classList.add('visible');
     modal.setAttribute('aria-hidden', 'false');
+    modal.setAttribute('aria-label', title);
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+
+    // Move focus to close button for keyboard users (WCAG 2.4.3)
+    setTimeout(() => { closeBtn.focus(); }, 50);
 
     if (typeof gsap !== 'undefined') {
       gsap.fromTo(content,
@@ -62,13 +70,26 @@
     modal.setAttribute('aria-hidden', 'true');
     modal.classList.remove('active');
     document.body.style.overflow = '';
+    // Return focus to the element that opened the modal (WCAG 2.4.3)
+    if (lastFocused) lastFocused.focus();
   }
 
   document.querySelectorAll('.trailer-panel').forEach((panel) => {
+    // Mouse click
     panel.addEventListener('click', () => {
       const videoId = panel.dataset.videoId;
       const title   = panel.dataset.title || 'Trailer';
       if (videoId) openModal(videoId, title);
+    });
+
+    // Keyboard: Enter or Space to open (WCAG 2.1.1)
+    panel.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const videoId = panel.dataset.videoId;
+        const title   = panel.dataset.title || 'Trailer';
+        if (videoId) openModal(videoId, title);
+      }
     });
   });
 

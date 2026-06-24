@@ -37,11 +37,23 @@
     lastScroll = y;
   }, { passive: true });
 
-  // Mobile hamburger toggle
+  // Mobile hamburger toggle (with aria-expanded for WCAG 4.1.2)
   hamburger.addEventListener('click', () => {
     const open = navLinks.classList.toggle('open');
     hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
     document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  // Close nav with Escape key (WCAG 2.1.2)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      hamburger.focus();
+    }
   });
 
   // Close nav on link click (mobile)
@@ -96,8 +108,12 @@
 
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
       tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
 
       const game = tab.dataset.gameTab;
       if (game === 'remake') {
