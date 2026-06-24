@@ -11,7 +11,13 @@
 (function () {
   'use strict';
 
-  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+    ['.hero-eyebrow', '.hero-logo-wrap', '.hero-subtitle', '.hero-tagline', '.hero-ctas'].forEach((sel) => {
+      const el = document.querySelector(sel);
+      if (el) { el.style.opacity = '1'; el.style.transform = 'none'; }
+    });
+    return;
+  }
 
   gsap.registerPlugin(ScrollTrigger);
 

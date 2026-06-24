@@ -2465,8 +2465,7 @@ ul {
 /* Ensure flex-wrap works across IE 10+, older Webkit */
 .hero-ctas,
 .game-platforms,
-.composer-highlights,
-.nav-links {
+.composer-highlights {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -2475,7 +2474,6 @@ ul {
 /* display:flex cross-browser */
 .btn,
 .nav-container,
-.nav-links,
 .stat-item,
 .song-item,
 .award-badge,
@@ -2495,7 +2493,6 @@ ul {
 .btn,
 .song-item,
 .award-badge,
-.nav-links,
 .newsletter-input-group,
 .newsletter-success,
 .song-listen,

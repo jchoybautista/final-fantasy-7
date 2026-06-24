@@ -224,6 +224,30 @@
 
   sections.forEach((sec) => observer.observe(sec));
 
+  // ── Lazy-load gallery videos ───────────────
+  // Videos use data-src on <source> to avoid loading ~166MB on page load.
+  // Load each video only when it scrolls near the viewport.
+  const lazyVideos = document.querySelectorAll('video[data-lazy-video]');
+  if (lazyVideos.length) {
+    const videoObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const video = entry.target;
+          video.querySelectorAll('source[data-src]').forEach((source) => {
+            source.src = source.dataset.src;
+            source.removeAttribute('data-src');
+          });
+          video.load();
+          video.play().catch(() => {});
+          obs.unobserve(video);
+        });
+      },
+      { rootMargin: '200px' }
+    );
+    lazyVideos.forEach((v) => videoObserver.observe(v));
+  }
+
   // ── Active nav CSS ─────────────────────────
   const style = document.createElement('style');
   style.textContent = `.nav-link-active { color: var(--lifestream) !important; }`;

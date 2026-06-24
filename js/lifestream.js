@@ -46,13 +46,13 @@
   // ── Stream Definitions ────────────────────
   // Each stream: base Y, Y-amplitude, flow speed, phase offset, ribbon half-width, opacity
   const STREAM_DEFS = [
-    { baseY:  3.2, ampY: 2.0, ampY2: 1.0, speed: 0.22, phase: 0.0,  hw: 1.4, opacity: 0.80 },
-    { baseY:  1.0, ampY: 3.2, ampY2: 1.4, speed: 0.17, phase: 1.5,  hw: 1.8, opacity: 0.75 },
-    { baseY: -1.2, ampY: 2.6, ampY2: 0.9, speed: 0.26, phase: 2.8,  hw: 1.2, opacity: 0.70 },
-    { baseY: -3.5, ampY: 1.8, ampY2: 1.2, speed: 0.20, phase: 0.9,  hw: 1.0, opacity: 0.65 },
-    { baseY:  4.5, ampY: 1.2, ampY2: 0.6, speed: 0.15, phase: 3.7,  hw: 0.7, opacity: 0.55 },
-    { baseY: -0.3, ampY: 4.0, ampY2: 1.8, speed: 0.13, phase: 5.1,  hw: 2.2, opacity: 0.50 },
-    { baseY:  2.0, ampY: 1.5, ampY2: 0.7, speed: 0.30, phase: 2.0,  hw: 0.8, opacity: 0.60 },
+    { baseY:  3.2, ampY: 2.3, ampY2: 1.2, speed: 0.22, phase: 0.0,  hw: 1.4, opacity: 0.90 },
+    { baseY:  1.0, ampY: 3.6, ampY2: 1.6, speed: 0.17, phase: 1.5,  hw: 1.8, opacity: 0.85 },
+    { baseY: -1.2, ampY: 3.0, ampY2: 1.1, speed: 0.26, phase: 2.8,  hw: 1.2, opacity: 0.80 },
+    { baseY: -3.5, ampY: 2.1, ampY2: 1.4, speed: 0.20, phase: 0.9,  hw: 1.0, opacity: 0.75 },
+    { baseY:  4.5, ampY: 1.4, ampY2: 0.8, speed: 0.15, phase: 3.7,  hw: 0.7, opacity: 0.65 },
+    { baseY: -0.3, ampY: 4.5, ampY2: 2.0, speed: 0.13, phase: 5.1,  hw: 2.2, opacity: 0.60 },
+    { baseY:  2.0, ampY: 1.8, ampY2: 0.9, speed: 0.30, phase: 2.0,  hw: 0.8, opacity: 0.70 },
   ];
 
   const SEG_N    = 160;  // segments along each ribbon
@@ -181,8 +181,8 @@
   // ── Wide ambient glow: extra-thick background ribbons ─
   // A second pass of very wide, very dim ribbons for the "bleed" look
   const GLOW_DEFS = [
-    { baseY:  1.8, ampY: 3.0, ampY2: 1.5, speed: 0.18, phase: 0.6,  hw: 5.0, opacity: 0.08 },
-    { baseY: -1.5, ampY: 3.5, ampY2: 1.2, speed: 0.14, phase: 3.2,  hw: 6.5, opacity: 0.06 },
+    { baseY:  1.8, ampY: 3.0, ampY2: 1.5, speed: 0.18, phase: 0.6,  hw: 5.0, opacity: 0.12 },
+    { baseY: -1.5, ampY: 3.5, ampY2: 1.2, speed: 0.14, phase: 3.2,  hw: 6.5, opacity: 0.09 },
   ];
 
   const glowStreams = GLOW_DEFS.map((def) => {
@@ -310,7 +310,7 @@
 
   function animate() {
     requestAnimationFrame(animate);
-    time += 0.007;
+    time += 0.009;
     frameCount++;
 
     // Update ribbons every 2 frames
@@ -319,7 +319,7 @@
         updateRibbonGeo(s.coreGeo, s.def, time);
 
         // Halo: same path, wider half-width
-        const hDef = Object.assign({}, s.def, { hw: s.def.hw * 2.6 });
+        const hDef = Object.assign({}, s.def, { hw: s.def.hw * 3.0 });
         updateRibbonGeo(s.haloGeo, hDef, time);
       });
 
