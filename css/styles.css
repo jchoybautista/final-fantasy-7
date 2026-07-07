@@ -2573,3 +2573,159 @@ body {
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
+
+/* ═══════════════════════════════════════════
+   MODERN REFINEMENT LAYER
+   Polish pass appended last so it wins the
+   cascade: unified card surfaces, ambient
+   section light, button sheen, brand glows.
+═══════════════════════════════════════════ */
+
+/* Brand-colored text selection */
+::selection {
+  background: rgba(0, 255, 179, 0.25);
+  color: #ffffff;
+}
+
+/* ── Unified card surface: soft vertical gradient + inner top light ── */
+.game-card,
+.rating-card,
+.character-card,
+.composer-card,
+.rating-quote,
+.timeline-content {
+  background: linear-gradient(180deg, rgba(0, 34, 21, 0.55) 0%, rgba(0, 13, 8, 0.78) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(170, 255, 220, 0.07),
+    0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Badges keep their own tinted backgrounds — just add the inner light */
+.award-badge,
+.composer-highlight,
+.game-badge {
+  box-shadow: inset 0 1px 0 rgba(170, 255, 220, 0.06);
+}
+
+/* Card hovers: deeper drop + mako glow ring */
+.game-card:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(170, 255, 220, 0.09),
+    0 24px 60px rgba(0, 0, 0, 0.5),
+    0 0 34px rgba(0, 255, 179, 0.1),
+    0 0 0 1px var(--border-hover);
+}
+.rating-card:hover,
+.timeline-content:hover,
+.character-card:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(170, 255, 220, 0.09),
+    0 16px 44px rgba(0, 0, 0, 0.45),
+    0 0 26px rgba(0, 255, 179, 0.09);
+}
+.rating-card--perfect {
+  box-shadow:
+    inset 0 1px 0 rgba(170, 255, 220, 0.08),
+    0 12px 40px rgba(0, 0, 0, 0.35),
+    0 0 26px rgba(0, 255, 179, 0.1);
+}
+
+/* ── Section atmosphere ── */
+/* Faint mako light pooling at the top of alternate sections */
+.section--dark {
+  background:
+    radial-gradient(55% 40% at 50% 0%, rgba(0, 255, 179, 0.055), transparent 70%),
+    var(--bg-alt);
+}
+
+/* Divider: solid stub → long hairline that fades at both ends */
+.section::before {
+  width: min(340px, 42vw);
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 179, 0.55), transparent);
+  opacity: 0.7;
+}
+
+/* Soft halo behind the gradient display type */
+.section-title {
+  filter: drop-shadow(0 0 26px rgba(0, 255, 179, 0.16));
+}
+
+/* Centered eyebrows get short fading side rules (director's stays plain) */
+.section-header .section-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.section-header .section-eyebrow::before,
+.section-header .section-eyebrow::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  flex-shrink: 0;
+}
+.section-header .section-eyebrow::before {
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 179, 0.45));
+}
+.section-header .section-eyebrow::after {
+  background: linear-gradient(90deg, rgba(0, 255, 179, 0.45), transparent);
+}
+
+/* ── Buttons: light sweep on hover + mako-tinted glow ── */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -70%;
+  width: 45%;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-22deg);
+  opacity: 0;
+  transition:
+    left 0.65s ease,
+    opacity 0.2s ease;
+  pointer-events: none;
+}
+.btn:hover::before {
+  left: 130%;
+  opacity: 1;
+}
+
+.btn-primary:hover {
+  box-shadow:
+    0 0 28px rgba(0, 255, 179, 0.3),
+    0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.btn-secondary:hover,
+.btn-outline:hover {
+  border-color: rgba(0, 255, 179, 0.65);
+  box-shadow: 0 0 24px rgba(0, 255, 179, 0.18);
+}
+
+.nav-cta:hover {
+  box-shadow: 0 0 24px rgba(0, 255, 179, 0.45);
+}
+
+/* ── Detail glows ── */
+.rating-fill {
+  box-shadow: 0 0 10px rgba(0, 255, 179, 0.55);
+}
+.rating-tab.active {
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.18);
+}
+.timeline-dot {
+  box-shadow:
+    0 0 12px rgba(0, 255, 179, 0.6),
+    0 0 30px rgba(0, 255, 179, 0.22);
+}
+.timeline-track-fill {
+  box-shadow: 0 0 8px rgba(0, 255, 179, 0.35);
+}
+.song-listen:hover {
+  box-shadow: 0 0 18px rgba(0, 255, 179, 0.35);
+}
